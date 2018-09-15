@@ -1,4 +1,5 @@
 The C code in this repository does 3 main procedures:
+
 1)It deals 2 hands with each hand made up of 5 cards.
 
   All cards in each hands are unique, and a hand is assigned for the user(You) and the Dealer.

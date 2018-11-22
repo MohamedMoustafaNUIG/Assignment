@@ -43,7 +43,9 @@ void main() {
 	
 	while (i<5)
 	{
-		printf("card#%d: %s (you) vs. %s (dealer). Winner: %s \n", i + 1, printCard(myHand.cards[i]), printCard(dealersHand.cards[i]), compareCards(myHand.cards[i], dealersHand.cards[i]));
+		printf("card#%d: %s (you) vs. %s (dealer). Winner: %s \n", i + 1, 
+		       printCard(myHand.cards[i]), printCard(dealersHand.cards[i]), 
+		       		compareCards(myHand.cards[i], dealersHand.cards[i]));
 		i++;
 	}
 
@@ -79,8 +81,10 @@ hand dealHand(hand x[],int y) {
 		else if (y == 0) {
 			do {
 				do {
-					if (newSuit == newHand.cards[k].suit && newFace == newHand.cards[k].face) { flag = 1; newSuit = (SUIT)(rand() % 4);  newFace = (FACE)(rand() % 13); k = 0; }
-					else { flag = 0;}
+					if (newSuit == newHand.cards[k].suit && newFace == newHand.cards[k].face) 
+						{ flag = 1; newSuit = (SUIT)(rand() % 4);  newFace = (FACE)(rand() % 13); k = 0; }
+					else 
+						{ flag = 0;}
 				} while (flag == 1);
 				k++;
 			} while (k < i);
@@ -92,8 +96,10 @@ hand dealHand(hand x[],int y) {
 			counter = 0;
 			for (int h = 0; h < i; h++) {
 				do {
-					if (newSuit == newHand.cards[h].suit && newFace == newHand.cards[h].face) { flag = 1; newSuit = (SUIT)(rand() % 4); counter--; newFace = (FACE)(rand() % 13);}
-					else { flag = 0; counter++; }
+					if (newSuit == newHand.cards[h].suit && newFace == newHand.cards[h].face) 
+						{ flag = 1; newSuit = (SUIT)(rand() % 4); counter--; newFace = (FACE)(rand() % 13);}
+					else 
+						{ flag = 0; counter++; }
 				} while (flag == 1);
 
 			}
@@ -101,8 +107,10 @@ hand dealHand(hand x[],int y) {
 
 				for (int m = 0; m < 5; m++) {
 					do {
-						if (newSuit == x[l].cards[m].suit && newFace == x[l].cards[m].face) { flag = 1; newSuit = (SUIT)(rand() % 4); counter++; newFace = (FACE)(rand() % 13); counter--;}
-						else { flag = 0; counter++; }
+						if (newSuit == x[l].cards[m].suit && newFace == x[l].cards[m].face) 
+							{ flag = 1; newSuit = (SUIT)(rand() % 4); counter++; newFace = (FACE)(rand() % 13); counter--;}
+						else 
+							{ flag = 0; counter++; }
 					} while (flag == 1);
 				}
 			}
